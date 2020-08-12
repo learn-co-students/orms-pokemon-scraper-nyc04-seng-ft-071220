@@ -4,14 +4,15 @@ class Pokemon
 
     @@all = []
 
-    def initialize(id:, name:, type:, db:)
-        @id = id
-        @name = name 
-        @type = type 
-        @db = db
+    def initialize(attributes)
+        attributes.each {|key, value| self.send(("#{key}="), value)}
     end
 
     def self.save(name, type, db)
+
+    end
+
+    def self.find(id, db)
         
     end
 
